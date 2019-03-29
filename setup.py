@@ -35,7 +35,7 @@ setup(
     author_email='mkim0407@gmail.com',
 
     classifiers=[
-        "Development Status :: 2 - Pre-Alpha",
+        "Development Status :: 5 - Production/Stable",
 
         "Intended Audience :: Developers",
 

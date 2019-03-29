@@ -1,7 +1,7 @@
 from functools import wraps as _wraps
 
 __author__ = 'Michael'
-__version__ = '1.0'
+__version__ = '1.1'
 
 
 class returns(object):
