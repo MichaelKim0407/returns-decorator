@@ -29,6 +29,8 @@ return int(return_value)
 
 On every return statement.
 
+---
+
 It's most useful to convert a generator function into a `tuple`/`list`/`set`/`dict`.
 
 ```python
@@ -38,3 +40,16 @@ def generator_func():
 ```
 
 Doing this has a better performance than `list.append`.
+
+---
+
+When `None` is a possible return value,
+you can pass `allow_none=True` into the decorator.
+
+```python
+@returns(int, allow_none=True)
+def func(...):
+    if ...:
+        return None
+    return ...
+```

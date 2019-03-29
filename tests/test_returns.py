@@ -19,3 +19,14 @@ def test_generator():
         yield from range(n)
 
     assert tuple_range(5) == (0, 1, 2, 3, 4)
+
+
+def test_none():
+    @returns(int, allow_none=True)
+    def parse_int(x):
+        return x
+
+    assert parse_int(1) == 1
+    assert parse_int(1.5) == 1
+    assert parse_int('1') == 1
+    assert parse_int(None) is None
